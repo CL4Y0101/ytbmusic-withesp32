@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Music ESP32 Lyrics",
+  "version": "1.0.1",
+  "description": "Realtime YouTube Music lyrics display for ESP32",
+
+  "permissions": [
+    "scripting"
+  ],
+
+  "host_permissions": [
+    "https://music.youtube.com/*",
+    "http://192.168.1.79/*"
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://music.youtube.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
