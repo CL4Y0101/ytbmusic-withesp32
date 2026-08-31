@@ -1,5 +1,5 @@
 const ESP32_URL =
-  "http://192.168.1.79/nowplaying";
+  "http://192.168.137.164/nowplaying";
 
 console.log(
   "[YTM ESP32] background ACTIVE"
